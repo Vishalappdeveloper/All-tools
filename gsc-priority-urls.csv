@@ -1,0 +1,10 @@
+url,type,status,canonical,indexable,sitemap,priority,reason
+/,homepage,200,self,true,sitemap.xml,1,Highest value entry point
+/utilities/about/,static_page,200,self,true,sitemap-pages.xml,1,Core trust page
+/category/<name>/,category,200,self,true,sitemap-pages.xml,1,Navigation hub linking many calculators
+/<category>/<top-calculator>/,calculator,200,self,true,sitemap-calculators.xml,2,High-traffic calculator tools
+/<category>/<converter>/,converter,200,self,true,sitemap-converters.xml,2,High-traffic converter tools
+/<category>/<calculator>/,calculator,200,self,true,sitemap-calculators.xml,3,Standard calculator long tail
+/<category>/<converter>/,converter,200,self,true,sitemap-converters.xml,3,Standard converter long tail
+/blog/<slug>/,blog_post,200,self,true,sitemap-blog.xml,4,Supporting content; largest volume bucket driving Discovered-not-indexed count
+/blog-archive/<slug>/,blog_archive,200,self,true,sitemap-blog-archive.xml,4,Archived supporting content

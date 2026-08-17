@@ -1,0 +1,10 @@
+url,status_code,content_type,indexable,noindex,canonical,canonical_status,redirect_target,in_sitemap,internal_links,page_type,duplicate_group,recommendation,reason
+/,200,text/html,true,false,self,ok,,true,many,homepage,none,KEEP_INDEXABLE,Primary entry page
+/<legacy>.html,301,text/html,false,false,n/a,n/a,/<category>/<slug>/,false,0,legacy_redirect,slash_html_variant,LEAVE_AS_IS,Already 301s once to final canonical slash URL; 0 redirect chains detected across 2979 entries
+/auth/login,not_applicable,application/json,false,true,n/a,n/a,,false,0,api_endpoint,none,REMOVE_FROM_SITEMAP,POST-only JSON endpoint; now Disallow'd in robots.txt; historical 404 clears only after Google recrawls
+/auth/register,not_applicable,application/json,false,true,n/a,n/a,,false,0,api_endpoint,none,REMOVE_FROM_SITEMAP,POST-only JSON endpoint
+/auth/me,not_applicable,application/json,false,true,n/a,n/a,,false,0,api_endpoint,none,REMOVE_FROM_SITEMAP,Session-authoritative user lookup
+/login/,200,text/html,false,true,self,ok,,false,some,private_page,none,NOINDEX,Login form; excluded from sitemap and robots.txt
+/signup/,200,text/html,false,true,self,ok,,false,some,private_page,none,NOINDEX,Signup form; excluded from sitemap and robots.txt
+/dashboard/,200,text/html,false,true,self,ok,,false,0,private_page,none,NOINDEX,Authenticated-only page
+/blog/<slug>/,200,text/html,true,false,self,ok,,true,varies,blog_post,none,FIX_CONTENT,Improve depth/internal-linking for long-tail posts to aid indexing

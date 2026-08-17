@@ -1,0 +1,37 @@
+# Cloudflare Pages configuration for allfreecalculators.in
+# This project uses Cloudflare Pages (static site + Pages Functions),
+# which is the recommended way to run Worker-style code alongside a static site.
+#
+# Setup steps:
+#   1. wrangler login
+#   2. wrangler d1 create allfreecalculators-db
+#      -> copy the returned database_id into the [[d1_databases]] block below
+#   3. wrangler d1 execute allfreecalculators-db --remote --file=migrations/0001_init.sql
+#   4. wrangler r2 bucket create allfreecalculators-media
+#   5. Set secrets (see DEPLOY.md for the full list), e.g.
+#      wrangler pages secret put JWT_SECRET
+#   6. wrangler pages deploy . --project-name=allfreecalculators
+
+name = "allfreecalculators"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "allfreecalculators-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+[[r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "allfreecalculators-media"
+
+# Secrets (set with `wrangler pages secret put <NAME>`, do NOT put real values here):
+#   JWT_SECRET          - required, used to sign/verify login tokens
+#   PASSWORD_PEPPER      - required, extra secret mixed into password hashing
+#   OPENAI_API_KEY        - optional, powers /api/ai/assistant and /api/ai/search
+#   GEMINI_API_KEY or GOOGLE_AI_API_KEY - optional, powers /api/ai-generate (admin AI content tool)
+#   RESEND_API_KEY        - optional, used to email OTP codes
+#   RAZORPAY_KEY_ID        - optional, powers /api/payments/razorpay-order and /api/payments/razorpay-verify
+#   RAZORPAY_KEY_SECRET    - optional, required together with RAZORPAY_KEY_ID
+#   STRIPE_SECRET_KEY      - optional, powers /api/payments/portal
+#   STRIPE_WEBHOOK_SECRET  - optional, for Stripe webhook signature verification if you build that route

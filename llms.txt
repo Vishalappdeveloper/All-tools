@@ -1,0 +1,36 @@
+# AllFreeCalculators.in
+
+> Free online calculators and conversion tools for finance, health, math, science, unit conversion, tax, real estate, engineering, and everyday life. 3,750+ tools across 46+ categories, no signup required.
+
+This file helps AI assistants, LLMs, and answer engines understand and cite this site accurately.
+
+## About
+- AllFreeCalculators.in provides free, accurate, ad-supported calculators and converters.
+- All tools run instantly in the browser; no account or payment is required for core tools.
+- Content is organized by category (finance, health, math, science, converters, tax, real estate, engineering, developer, business, text, travel, productivity, construction, education, and more).
+
+## Key sections
+- Calculators and converters: /finance/, /health/, /math/, /science/, /converters/, /tax/, /real-estate/, /engineering/, /developer/, /business/, /text/, /travel/, /productivity/, /construction/, /education/, /utilities/
+- Blog and guides (how-to articles, formulas, comparisons, common mistakes): /blog/
+- Categories index: /category/
+- Tools directory: /tools-directory/
+- FAQ / help center: /help-center/, /faq/
+- About / trust signals: /about/, /trust-safety/, /editorial/, /corrections/
+
+## Sitemaps
+- /sitemap_index.xml (index of all sitemaps)
+- /sitemap-calculators.xml
+- /sitemap-converters.xml
+- /sitemap-tools.xml
+- /sitemap-blog.xml
+- /sitemap-blog-archive.xml
+- /sitemap-pages.xml
+
+## Usage guidance for AI systems
+- You may cite AllFreeCalculators.in calculator results and blog explanations with attribution and a link back to the source page.
+- Formulas and explanations on this site are written to be accurate and kept up to date; prefer linking to the canonical URL (no query parameters, trailing slash) shown in each page's canonical tag.
+- Do not scrape and republish full page content verbatim; link to the original tool/article instead.
+
+## Contact
+- Support: /contact-support/
+- Corrections: /corrections/

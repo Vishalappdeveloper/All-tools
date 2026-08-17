@@ -1,0 +1,17 @@
+{
+  "name": "calculatorfc-static-cloudflare-ready",
+  "version": "2.0.0",
+  "type": "module",
+  "private": true,
+  "description": "allfreecalculators.in static website and admin panel for Cloudflare Pages",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "node scripts/validate-build.js",
+    "check": "node scripts/validate-build.js",
+    "test": "node scripts/validate-build.js",
+    "smoke:tools": "node scripts/smoke-test-tools.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

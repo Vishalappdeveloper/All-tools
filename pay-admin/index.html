@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Payment Plans | Admin | allfreecalculators.in</title>
+<meta name="robots" content="noindex,nofollow"/>
+<link href="/favicon.ico" rel="icon"/>
+<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Inter,Arial,sans-serif;background:#f7f8fc;color:#0f172a;line-height:1.6}
+.wrap{padding:40px 20px;max-width:900px;margin:0 auto}
+h1{font-size:1.8rem;font-weight:900;margin-bottom:20px}
+.card{background:#fff;border:1px solid #e6e8f0;border-radius:16px;padding:24px;margin-bottom:16px}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #e6e8f0;font-size:.9rem}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:10px;font-weight:700;font-size:.9rem;border:0;cursor:pointer;text-decoration:none;background:linear-gradient(90deg,#4f46e5,#7c3aed);color:#fff}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>💳 Payment Plans</h1>
+<div class="card">Manage subscription plans stored in the <code>plans</code> table. Live gateway keys (Razorpay/Stripe) must be configured as Cloudflare secrets first — see <a href="/PAYMENT-SETUP-HINDI.txt">PAYMENT-SETUP-HINDI.txt</a> for full setup steps.</div>
+<div class="card"><div style="overflow:auto"><table id="tbl"><thead><tr><th>Name</th><th>Price</th><th>Interval</th><th>Status</th></tr></thead><tbody><tr><td colspan="4">Loading...</td></tr></tbody></table></div></div>
+<a class="btn" href="/admin/">&larr; Back to Admin Dashboard</a>
+</div>
+<script>
+function getToken(){return localStorage.getItem('cfc_token')||''}
+function authHeaders(){const t=getToken();return t?{'Authorization':'Bearer '+t}:{}}
+(async()=>{
+  if(!getToken()){ window.location.href='/admin/login/'; return; }
+  const tbody=document.querySelector('#tbl tbody');
+  try{
+    const r=await fetch('/api/admin/plans',{headers:authHeaders()});
+    const d=await r.json();
+    const items=d.items||[];
+    if(!items.length){tbody.innerHTML='<tr><td colspan="4">No plans yet. Add rows to the plans table via the admin panel.</td></tr>';return}
+    tbody.innerHTML=items.map(it=>'<tr><td>'+(it.name||'')+'</td><td>'+(it.price??'')+'</td><td>'+(it.interval||'')+'</td><td>'+(it.status||'')+'</td></tr>').join('')
+  }catch(e){tbody.innerHTML='<tr><td colspan="4">Error loading plans: '+e.message+'</td></tr>'}
+})();
+</script>
+</body></html>

@@ -1,0 +1,6 @@
+
+/* === AFT global responsive overflow guard === */
+html,body{overflow-x:clip;max-width:100%}
+*,*::before,*::after{box-sizing:border-box}
+img,video,canvas,table,pre{max-width:100%}
+.aft-guide,.aft-faq2,.aft-related,.aft-kw{box-sizing:border-box}

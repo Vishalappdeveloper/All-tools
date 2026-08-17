@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="#4f46e5" name="theme-color"/>
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<title>Login | allfreecalculators.in</title>
+<meta name="description" content="Sign in to your allfreecalculators.in account to access saved calculators, favorites, and personalized tools."/>
+<meta name="robots" content="noindex, follow"/>
+<link rel="canonical" href="https://allfreecalculators.in/login/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="allfreecalculators.in"/>
+<meta property="og:title" content="Login | allfreecalculators.in"/>
+<meta property="og:description" content="Sign in to your allfreecalculators.in account to access saved calculators, favorites, and personalized tools."/>
+<meta property="og:url" content="https://allfreecalculators.in/login/"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Login | allfreecalculators.in"/>
+<meta name="twitter:description" content="Sign in to your allfreecalculators.in account to access saved calculators, favorites, and personalized tools."/>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebPage","url":"https://allfreecalculators.in/login/","name":"Login","description":"Sign in to your allfreecalculators.in account","inLanguage":"en-IN"}]</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}:root{--bg:#f7f8fc;--fg:#0f172a;--muted:#64748b;--card:#fff;--line:#e6e8f0;--brand:#4f46e5;--brand2:#7c3aed;--accent:#06b6d4;--error:#ef4444;--success:#22c55e}body.dark{--bg:#0b1020;--fg:#e5e9f5;--muted:#94a3b8;--card:#141a2e;--line:#233}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;min-height:100vh;display:flex;align-items:center;justify-content:center}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.auth-page{min-width:100%;display:flex;align-items:center;justify-content:center;padding:40px 20px;background:var(--bg)}
+.auth-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:40px 32px;width:100%;max-width:440px;box-shadow:0 20px 60px rgba(0,0,0,.08)}
+.auth-logo{text-align:center;margin-bottom:32px}
+.auth-logo .mark{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;font-size:1.5rem;font-weight:900}
+.auth-logo h1{font-size:1.3rem;font-weight:800;margin-top:12px;background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.auth-logo p{color:var(--muted);font-size:.9rem;margin-top:4px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-weight:600;font-size:.88rem;margin-bottom:6px;color:var(--fg)}
+.form-group input{width:100%;padding:12px 16px;border:1px solid var(--line);border-radius:12px;font-size:1rem;background:var(--bg);color:var(--fg);outline:none;transition:border-color .2s}
+.form-group input:focus{border-color:var(--brand)}
+.form-group input::placeholder{color:var(--muted)}
+.form-error{color:var(--error);font-size:.82rem;margin-top:4px;display:none}
+.form-error.visible{display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 20px;border-radius:12px;font-weight:700;font-size:.95rem;border:0;cursor:pointer;width:100%;transition:opacity .2s,transform .1s}
+.btn:active{transform:scale(.98)}
+.btn.primary{background:linear-gradient(90deg,var(--brand),var(--brand2));color:#fff}
+.btn.primary:hover{opacity:.92}
+.btn.primary:disabled{opacity:.5;cursor:not-allowed}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--fg)}
+.btn.sm{padding:8px 14px;font-size:.82rem;border-radius:10px}
+.auth-footer{text-align:center;margin-top:24px;font-size:.88rem;color:var(--muted)}
+.auth-footer a{color:var(--brand);font-weight:600}
+.auth-footer a:hover{text-decoration:underline}
+.alert{padding:12px 16px;border-radius:12px;font-size:.88rem;margin-bottom:20px;display:none}
+.alert.error{background:rgba(239,68,68,.1);color:var(--error);border:1px solid rgba(239,68,68,.2);display:block}
+.alert.success{background:rgba(34,197,94,.1);color:var(--success);border:1px solid rgba(34,197,94,.2);display:block}
+.password-field{position:relative}
+.password-field input{padding-right:44px}
+.toggle-pw{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:1.1rem;color:var(--muted)}
+.spinner{display:inline-block;width:18px;height:18px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:480px){.auth-card{padding:28px 20px}}
+</style>
+</head>
+<body>
+<div class="auth-page">
+<div class="auth-card">
+<div class="auth-logo">
+<div class="mark">∑</div>
+<h1>allfreecalculators.in</h1>
+<p>Sign in to your account</p>
+</div>
+<div class="alert" id="alert"></div>
+<form id="loginForm" novalidate>
+<div class="form-group">
+<label for="email">Email Address</label>
+<input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email"/>
+<div class="form-error" id="emailError">Please enter a valid email address.</div>
+</div>
+<div class="form-group">
+<label for="password">Password</label>
+<div class="password-field">
+<input type="password" id="password" name="password" placeholder="Enter your password" required autocomplete="current-password"/>
+<button type="button" class="toggle-pw" id="togglePw" aria-label="Toggle password visibility">👁</button>
+</div>
+<div class="form-error" id="passwordError">Password must be at least 6 characters.</div>
+</div>
+<div class="form-group" style="display:flex;align-items:center;justify-content:space-between">
+<label style="display:flex;align-items:center;gap:6px;font-weight:400;font-size:.85rem;cursor:pointer"><input type="checkbox" id="rememberMe"/> Remember me</label>
+<a href="/forgot-password/" style="font-size:.85rem;color:var(--brand);font-weight:600">Forgot password?</a>
+</div>
+<button type="submit" class="btn primary" id="submitBtn">Sign In</button>
+</form>
+<div class="auth-footer">Don't have an account? <a href="/signup/">Create one</a></div>
+</div>
+</div>
+<script>
+(function(){var form=document.getElementById('loginForm');var alert=document.getElementById('alert');var submitBtn=document.getElementById('submitBtn');var togglePw=document.getElementById('togglePw');var pwField=document.getElementById('password');
+togglePw.addEventListener('click',function(){var t=pwField.type==='password'?'text':'password';pwField.type=t;togglePw.textContent=t==='password'?'👁':'🙈';});
+form.addEventListener('submit',function(e){e.preventDefault();var email=document.getElementById('email').value.trim();var password=document.getElementById('password').value;var valid=true;
+document.querySelectorAll('.form-error').forEach(function(el){el.classList.remove('visible')});
+if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){document.getElementById('emailError').classList.add('visible');valid=false;}
+if(!password||password.length<6){document.getElementById('passwordError').classList.add('visible');valid=false;}
+if(!valid)return;
+submitBtn.disabled=true;submitBtn.innerHTML='<span class="spinner"></span> Signing in...';
+fetch('/auth/login',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,password:password})}).then(function(r){return r.json();}).then(function(data){
+if(data.ok){alert.className='alert success';alert.textContent=data.message||'Welcome back!';setTimeout(function(){window.location.href='/dashboard/';},800);}
+else{alert.className='alert error';alert.textContent=data.error||'Login failed. Please try again.';submitBtn.disabled=false;submitBtn.textContent='Sign In';}
+}).catch(function(){alert.className='alert error';alert.textContent='Network error. Please check your connection.';submitBtn.disabled=false;submitBtn.textContent='Sign In';});
+});
+})();
+</script>
+</body>
+</html>

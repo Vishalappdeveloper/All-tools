@@ -1,0 +1,12 @@
+url_pattern,page_type,count_in_sitemap,indexable,in_sitemap,canonical_status,recommendation,reason
+/,homepage,1,true,true,self,KEEP_INDEXABLE,High-value entry page
+/<category>/<calculator>/,calculator,1500,true,true,self,KEEP_INDEXABLE,Unique tool + unique content per page
+/<category>/<converter>/,converter,1506,true,true,self,KEEP_INDEXABLE,Unique tool + unique content per page
+/utilities/<tool>/,tool_page,701,true,true,self,KEEP_INDEXABLE,Static utility pages (about/contact/legal/etc.)
+/blog/<slug>/,blog_post,11987,true,true,self,FIX_CONTENT,"Largest bucket; primary driver of GSC ""Discovered - not indexed""; needs per-post content-depth + internal-link review, not mass indexing requests"
+/blog-archive/<slug>/,blog_archive,60,true,true,self,KEEP_INDEXABLE,Archived posts kept for historical SEO equity
+/<legacy-path>.html,legacy_url,2979,false,false,redirect_301,REDIRECT,"301 to canonical slash-based URL via functions/[[path]].js + data/legacy-redirects.json; correctly excluded from sitemap"
+/login,/signup,/account,/dashboard,private_page,0,false,false,n/a,NOINDEX,Disallowed in robots.txt; correctly excluded from sitemap
+/auth/*,api_endpoint,0,false,false,n/a,REMOVE_FROM_SITEMAP,"POST-only JSON API, not an HTML page; now Disallow'd in robots.txt (this pass)"
+/api/*,api_endpoint,0,false,false,n/a,REMOVE_FROM_SITEMAP,JSON API responses; already Disallow'd
+/admin/*,private_page,0,false,false,n/a,NOINDEX,Admin panel; already Disallow'd

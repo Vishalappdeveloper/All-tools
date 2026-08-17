@@ -1,0 +1,20 @@
+
+/* === AFT responsive header/footer fix (all devices) === */
+html,body{overflow-x:clip;max-width:100%}
+.cfc-site-header,.cfc-catnav,.cfc-site-foot{max-width:100vw;box-sizing:border-box}
+.cfc-topbar{box-sizing:border-box}
+.cfc-catnav-in{overflow-x:auto!important;max-width:100%!important;box-sizing:border-box}
+.cfc-search-btn{min-width:0}
+@media(max-width:760px){
+.cfc-topbar{flex-wrap:wrap;gap:8px;padding:10px 12px}
+.cfc-search-btn{order:3;flex:1 1 100%!important;max-width:none}
+.cfc-hdr-actions{margin-left:auto}
+.cfc-logo{font-size:1rem}
+.cfc-mk{width:30px;height:30px}
+.cfc-hdr-pro{padding:8px 11px;font-size:.8rem}
+}
+
+/* === Duplicate-chrome guard: agar page ka apna native header/footer hai to cfc-injected duplicate hide karo === */
+body:has(header:not(.cfc-site-header)) .cfc-site-header,
+body:has(header:not(.cfc-site-header)) .cfc-catnav{display:none!important}
+body:has(footer:not(.cfc-site-foot)) .cfc-site-foot{display:none!important}

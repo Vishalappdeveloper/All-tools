@@ -1,0 +1,40 @@
+{
+  "scope": "static code + sitemap inspection of uploaded ZIP; no live crawl performed (no production network access in this environment)",
+  "sitemaps": {
+    "sitemap_index.xml": 7,
+    "sitemap.xml": 1,
+    "sitemap-pages.xml": 101,
+    "sitemap-blog-archive.xml": 60,
+    "sitemap-calculators.xml": 1500,
+    "sitemap-converters.xml": 1506,
+    "sitemap-tools.xml": 701,
+    "sitemap-blog.xml": 11987,
+    "total_unique_urls_approx": 15856
+  },
+  "redirects": {
+    "total_legacy_redirects": 2979,
+    "chained_redirects_found": 0,
+    "all_status_code": 301
+  },
+  "private_urls_in_sitemaps": 0,
+  "api_urls_in_sitemaps": 0,
+  "duplicate_sitemap_urls_removed_prior_pass": 2206,
+  "robots_txt": {
+    "disallows": ["/admin/", "/login/", "/signup/", "/account/", "/dashboard/", "/api/", "/auth/", "/functions/"],
+    "blocks_calculators_or_blog": false
+  },
+  "gsc_categories_mapped": {
+    "discovered_not_indexed_15_9k": "root cause identified as sitemap-blog.xml volume (11987 of 15856 sitemap URLs); no sitemap technical defect found",
+    "page_with_redirect_760": "redirect map verified clean (0 chains, all single-hop 301); cannot map individual 760 URLs without live crawl or GSC export",
+    "alternative_canonical_505": "blocked pending GSC CSV export for per-URL classification",
+    "duplicate_different_canonical_25": "blocked pending GSC CSV export for per-URL classification",
+    "crawled_not_indexed_20": "possibly stale sitemap filenames (sitemap-finance.xml/health.xml/currency.xml) not present in this ZIP",
+    "not_found_404_auth_login": "confirmed intentional API endpoint; robots.txt updated; GSC entry clears only after recrawl"
+  },
+  "blocked_items_requiring_user_input": [
+    "GSC CSV export for 505 + 25 URL buckets",
+    "Live HTML source of the dashboard page showing the class=page bug (not reproducible in this ZIP)",
+    "Real D1 database_id for wrangler.toml (currently a placeholder)",
+    "Confirmation of whether old sitemap-finance/health/currency.xml files still exist on the live server"
+  ]
+}

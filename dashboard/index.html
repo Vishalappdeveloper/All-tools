@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="#4f46e5" name="theme-color"/>
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<title>Dashboard | allfreecalculators.in</title>
+<meta name="description" content="Your personal dashboard on allfreecalculators.in. Manage favorites, saved calculators, history, and account settings."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="canonical" href="https://allfreecalculators.in/dashboard/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="allfreecalculators.in"/>
+<meta property="og:title" content="Dashboard | allfreecalculators.in"/>
+<meta property="og:description" content="Your personal dashboard on allfreecalculators.in. Manage favorites, saved calculators, history, and account settings."/>
+<meta property="og:url" content="https://allfreecalculators.in/dashboard/"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dashboard | allfreecalculators.in"/>
+<meta name="twitter:description" content="Your personal dashboard on allfreecalculators.in. Manage favorites, saved calculators, history, and account settings."/>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebPage","url":"https://allfreecalculators.in/dashboard/","name":"Dashboard","description":"User dashboard for managing calculators and account","inLanguage":"en-IN"}]</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}:root{--bg:#f7f8fc;--fg:#0f172a;--muted:#64748b;--card:#fff;--line:#e6e8f0;--brand:#4f46e5;--brand2:#7c3aed;--accent:#06b6d4}body.dark{--bg:#0b1020;--fg:#e5e9f5;--muted:#94a3b8;--card:#141a2e;--line:#233}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}body.dark header.site{background:rgba(11,16,32,.82)}
+.nav{display:flex;align-items:center;gap:18px;height:64px}
+.logo{font-weight:800;font-size:1.15rem;background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.nav .links{display:flex;gap:18px;margin-left:14px}
+.nav .links a{color:var(--muted);font-weight:600;font-size:.93rem}
+.nav .links a:hover{color:var(--brand)}
+.nav .sp{flex:1}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:10px;font-weight:700;font-size:.9rem;border:0;cursor:pointer}
+.btn.primary{background:linear-gradient(90deg,var(--brand),var(--brand2));color:#fff}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--fg)}
+#dk{background:transparent;border:1px solid var(--line);border-radius:10px;width:40px;height:40px;cursor:pointer;font-size:1.1rem}
+.dashboard{padding:40px 20px}
+.dashboard-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:32px}
+.dashboard-header h1{font-size:1.8rem;font-weight:900}
+.dashboard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.dashboard-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;transition:all .2s}
+.dashboard-card:hover{border-color:var(--brand);box-shadow:0 8px 24px rgba(79,70,229,.12)}
+.dashboard-card .card-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:16px;background:linear-gradient(135deg,rgba(79,70,229,.12),rgba(124,58,237,.12))}
+.dashboard-card h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+.dashboard-card p{color:var(--muted);font-size:.9rem;margin-bottom:16px}
+.card-stat{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid var(--line)}
+.card-stat span:first-child{color:var(--muted);font-size:.85rem}
+.card-stat span:last-child{font-weight:700;color:var(--fg)}
+.sidebar-nav{display:none}
+@media(min-width:900px){
+.dashboard-layout{display:grid;grid-template-columns:260px 1fr;gap:32px}
+.sidebar-nav{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;height:fit-content;position:sticky;top:84px}
+.sidebar-nav h4{font-size:.8rem;font-weight:700;text-transform:uppercase;color:var(--muted);letter-spacing:.5px;margin-bottom:12px}
+.sidebar-nav ul{list-style:none}
+.sidebar-nav li{margin-bottom:4px}
+.sidebar-nav a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;font-size:.9rem;color:var(--fg);transition:all .15s}
+.sidebar-nav a:hover{background:rgba(79,70,229,.1);color:var(--brand)}
+.sidebar-nav a.active{background:rgba(79,70,229,.1);color:var(--brand);font-weight:600}
+.sidebar-nav .icon{width:20px;height:20px;display:flex;align-items:center;justify-content:center}
+}
+.user-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(79,70,229,.1);color:var(--brand);padding:6px 12px;border-radius:20px;font-size:.8rem;font-weight:600}
+</style>
+</head>
+<body>
+<header class="site"><div class="container nav"><a class="logo" href="/">allfreecalculators.in</a><nav class="links"><a href="/">Home</a><a href="/converters/all-calculators-converter/">Tools</a><a href="/category/">Categories</a><a href="/blog/">Blog</a></nav><span class="sp"></span><div style="display:flex;align-items:center;gap:12px"><span class="user-badge" id="userBadge">Loading...</span><a class="btn ghost" href="/dashboard/">Dashboard</a><button id="dk" aria-label="Toggle theme">🌙</button><button id="logoutBtn" class="btn ghost" style="display:none">Logout</button></div></div></header>
+<div class="dashboard-layout" style="display:none">
+<aside class="sidebar-nav" id="sidebar">
+<h4>Account</h4>
+<ul>
+<li><a href="/dashboard/" class="active"><span class="icon">📊</span> Overview</a></li>
+<li><a href="/dashboard/profile/"><span class="icon">👤</span> Profile</a></li>
+<li><a href="/dashboard/favorites/"><span class="icon">⭐</span> Favorites</a></li>
+<li><a href="/dashboard/history/"><span class="icon">🕒</span> History</a></li>
+<li><a href="/dashboard/saved/"><span class="icon">💾</span> Saved Calculators</a></li>
+<li><a href="/dashboard/settings/"><span class="icon">⚙️</span> Settings</a></li>
+<li><a href="/dashboard/security/"><span class="icon">🔒</span> Security</a></li>
+</ul>
+</aside>
+<main class="dashboard-main">
+<div class="dashboard-header">
+<h1>Dashboard</h1>
+<div style="display:flex;gap:12px;align-items:center"><a href="/converters/all-calculators-converter/" class="btn primary">Explore Tools</a></div>
+</div>
+<div class="dashboard-grid" id="dashboardGrid">
+<div class="dashboard-card"><div class="card-icon">⭐</div><h3>Favorites</h3><p>Quick access to your most-used calculators and tools.</p><div class="card-stat"><span>Total</span><span id="favCount">0</span></div></div>
+<div class="dashboard-card"><div class="card-icon">💾</div><h3>Saved Calculators</h3><p>Calculators with saved inputs for quick reuse.</p><div class="card-stat"><span>Total</span><span id="savedCount">0</span></div></div>
+<div class="dashboard-card"><div class="card-icon">🕒</div><h3>Calculation History</h3><p>Recent calculations across all tools.</p><div class="card-stat"><span>Total</span><span id="historyCount">0</span></div></div>
+<div class="dashboard-card"><div class="card-icon">📊</div><h3>Usage Stats</h3><p>Your activity on allfreecalculators.in</p><div class="card-stat"><span>Sessions</span><span id="sessionCount">0</span></div></div>
+</div>
+</main>
+</div>
+<main class="dashboard" id="mobileDashboard" style="display:block">
+<div class="dashboard-header">
+<h1>Dashboard</h1>
+<div style="display:flex;gap:12px;align-items:center"><a href="/converters/all-calculators-converter/" class="btn primary">Explore Tools</a></div>
+</div>
+<div class="dashboard-grid" id="mobileDashboardGrid">
+<div class="dashboard-card"><div class="card-icon">⭐</div><h3>Favorites</h3><p>Quick access to your most-used calculators and tools.</p><div class="card-stat"><span>Total</span><span id="mobFavCount">0</span></div></div>
+<div class="dashboard-card"><div class="card-icon">💾</div><h3>Saved Calculators</h3><p>Calculators with saved inputs for quick reuse.</p><div class="card-stat"><span>Total</span><span id="mobSavedCount">0</span></div></div>
+<div class="dashboard-card"><div class="card-icon">🕒</div><h3>Calculation History</h3><p>Recent calculations across all tools.</p><div class="card-stat"><span>Total</span><span id="mobHistoryCount">0</span></div></div>
+<div class="dashboard-card"><div class="card-icon">📊</div><h3>Usage Stats</h3><p>Your activity on allfreecalculators.in</p><div class="card-stat"><span>Sessions</span><span id="mobSessionCount">0</span></div></div>
+</div>
+</main>
+<footer class="site" style="margin-top:60px"><div class="container"><div class="cols"><div><div class="logo" style="font-size:1.2rem">allfreecalculators.in</div><p style="color:#94a3b8;margin-top:10px;max-width:320px;font-size:.9rem">3,750+ free online calculators, converters and tools.</p></div><div><h4>Explore</h4><a href="/converters/all-calculators-converter/">All Tools</a><a href="/category/">Categories</a><a href="/blog/">Blog</a></div><div><h4>Account</h4><a href="/dashboard/">Dashboard</a><a href="/dashboard/profile/">Profile</a><a href="/dashboard/settings/">Settings</a></div><div><h4>Legal</h4><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></div></div><div class="cp">© 2026 allfreecalculators.in — All rights reserved.</div></div></footer>
+<script>
+(function(){var dk=document.getElementById("dk");if(localStorage.getItem("afc-dark")=="1"){document.body.classList.add("dark");dk.textContent="☀️"}dk.onclick=function(){var d=document.body.classList.toggle("dark");localStorage.setItem("afc-dark",d?"1":"0");dk.textContent=d?"☀️":"🌙";};
+async function loadUser(){try{var r=await fetch('/auth/me');var d=await r.json();if(d.ok&&d.user){var badge=document.getElementById('userBadge');badge.textContent=d.user.name||d.user.email;badge.style.display='inline-flex';document.getElementById('logoutBtn').style.display='inline-flex';loadDashboardStats();}else{window.location.href='/login/';}}catch(e){window.location.href='/login/';}}
+async function loadDashboardStats(){try{var r=await fetch('/api/dashboard');var d=await r.json();if(d.ok){['favCount','mobFavCount'].forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=d.favorites||0;});['savedCount','mobSavedCount'].forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=d.saved||0;});['historyCount','mobHistoryCount'].forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=d.history||0;});['sessionCount','mobSessionCount'].forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=d.sessions||0;});}}catch(e){}}
+document.getElementById('logoutBtn').addEventListener('click',async function(){try{await fetch('/auth/logout',{method:'POST'});window.location.href='/';}catch(e){}});
+loadUser();
+if(window.innerWidth>=900){document.getElementById('mobileDashboard').style.display='none';document.querySelector('.dashboard-layout').style.display='grid';}window.addEventListener('resize',function(){if(window.innerWidth>=900){document.getElementById('mobileDashboard').style.display='none';document.querySelector('.dashboard-layout').style.display='grid';}else{document.getElementById('mobileDashboard').style.display='block';document.querySelector('.dashboard-layout').style.display='none';}});
+})();
+</script>
+</body>
+</html>

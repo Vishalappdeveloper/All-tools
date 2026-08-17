@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://allfreecalculators.in/sitemap.xml</loc>
+    <lastmod>2026-08-03</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://allfreecalculators.in/sitemap-pages.xml</loc>
+    <lastmod>2026-08-03</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://allfreecalculators.in/sitemap-blog-archive.xml</loc>
+    <lastmod>2026-08-15</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://allfreecalculators.in/sitemap-calculators.xml</loc>
+    <lastmod>2026-08-03</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://allfreecalculators.in/sitemap-converters.xml</loc>
+    <lastmod>2026-08-03</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://allfreecalculators.in/sitemap-tools.xml</loc>
+    <lastmod>2026-08-03</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://allfreecalculators.in/sitemap-blog.xml</loc>
+    <lastmod>2026-08-03</lastmod>
+  </sitemap>
+</sitemapindex>

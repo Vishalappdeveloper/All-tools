@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="TVhsK7a4TEG8ONxH7WV8PQ" async></script>
+<script>
+  var ahrefs_analytics_script = document.createElement('script');
+  ahrefs_analytics_script.async = true;
+  ahrefs_analytics_script.src = 'https://analytics.ahrefs.com/analytics.js';
+  ahrefs_analytics_script.setAttribute('data-key', 'TVhsK7a4TEG8ONxH7WV8PQ');
+  document.getElementsByTagName('head')[0].appendChild(ahrefs_analytics_script);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-56BHMXTD');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Settings Manager — allfreecalculators.in Admin</title>
+<style>
+:root{--bg:#0b1020;--card:#141a2e;--card2:#0f1730;--line:#243052;--txt:#e8ecf6;--mut:#93a0c0;--acc:#5b8cff;--ok:#28c76f;--warn:#ff9f43;--err:#ff5b5b;--crit:#ff5b5b;--high:#ff9f43;--medium:#5b8cff;--low:#28c76f}
+*{box-sizing:border-box}body{margin:0;font:14px/1.5 system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt)}
+header{position:sticky;top:0;z-index:9;display:flex;gap:10px;align-items:center;padding:12px 18px;background:#0d1428;border-bottom:1px solid var(--line);flex-wrap:wrap}
+header h1{font-size:16px;margin:0;flex:1;white-space:nowrap}
+input,select,textarea,button{font:inherit;color:var(--txt);background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+button{cursor:pointer}button.pri{background:var(--acc);border-color:var(--acc);color:#fff}button.gho{background:transparent}
+.wrap{display:grid;grid-template-columns:250px 1fr;min-height:calc(100vh - 56px)}
+nav{border-right:1px solid var(--line);padding:10px;overflow:auto;max-height:calc(100vh - 56px);position:sticky;top:56px}
+nav input{width:100%;margin-bottom:8px}
+nav a{display:flex;justify-content:space-between;gap:6px;padding:6px 9px;border-radius:7px;color:var(--mut);text-decoration:none;font-size:13px;cursor:pointer}
+nav a:hover,nav a.on{background:#182142;color:#fff}
+nav a .c{font-size:10px;background:#1c2748;border-radius:20px;padding:1px 7px}
+main{padding:16px 18px;max-width:1200px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
+.bar input,.bar select{min-width:120px}
+.stat{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.stat .s{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.stat .s b{font-size:20px;display:block}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:0 0 14px;overflow:hidden}
+.cat>h2{margin:0;padding:11px 15px;font-size:14px;background:#111830;border-bottom:1px solid var(--line);display:flex;gap:8px;align-items:center}
+.item{border-top:1px solid #1b2444}
+.item:first-of-type{border-top:0}
+.head{display:grid;grid-template-columns:1fr 340px;gap:14px;padding:12px 15px;cursor:pointer}
+.head:hover{background:#121a34}
+.meta b{font-size:14px}
+.meta small{color:var(--mut);display:block;margin-top:2px}
+.k{font-family:ui-monospace,monospace;font-size:11px;color:#6b7aa8}
+.ctrl{display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap}
+.ctrl input,.ctrl select,.ctrl textarea{flex:1;min-width:150px}
+.tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}
+.tag{font-size:10px;padding:2px 7px;border-radius:20px;border:1px solid var(--line);color:var(--mut)}
+.sec{font-size:10px;padding:2px 8px;border-radius:20px;color:#0b1020;font-weight:600}
+.sec.critical{background:var(--crit)}.sec.high{background:var(--high)}.sec.medium{background:var(--medium);color:#fff}.sec.low{background:var(--low);color:#0b1020}
+.detail{padding:0 15px 14px;display:none}
+.detail.open{display:block}
+.grid40{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px 16px;background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:12px}
+.attr{font-size:12px}.attr b{color:var(--mut);font-weight:500;display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.03em}
+.attr span{color:var(--txt);word-break:break-word}
+.yes{color:var(--ok)}.no{color:var(--mut)}
+.toast{position:fixed;right:18px;bottom:18px;background:#12203f;border:1px solid var(--acc);padding:10px 14px;border-radius:10px;opacity:0;transition:.3s;z-index:20}
+.toast.on{opacity:1}
+.hide{display:none}
+.note{color:var(--mut)}
+@media(max-width:820px){.wrap{grid-template-columns:1fr}nav{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--line)}.head{grid-template-columns:1fr}}
+</style>
+<link rel="stylesheet" href="/css/afc-chrome.css"><!--afc-chrome--><link rel="icon" type="image/svg+xml" href="/img/afc-icon.svg"><!--afc-fav--></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56BHMXTD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><header class="site"><div class="container nav"><a class="logo" href="/"><svg viewBox="0 0 40 40" width="1.25em" height="1.25em" style="vertical-align:-6px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="10" fill="#4f46e5"/><rect x="9" y="8" width="22" height="7" rx="2" fill="#c7d2fe"/><g fill="#fff"><rect x="9" y="19" width="6" height="5" rx="1.5"/><rect x="17" y="19" width="6" height="5" rx="1.5"/><rect x="25" y="19" width="6" height="5" rx="1.5"/><rect x="9" y="27" width="6" height="5" rx="1.5"/><rect x="17" y="27" width="6" height="5" rx="1.5"/><rect x="25" y="27" width="6" height="5" rx="1.5"/></g></svg>allfreecalculators.in</a><nav class="links"><a href="/">Home</a><a href="/converters/all-calculators-converter/">All Tools A–Z</a><a href="/file-tools/">File Tools</a><a href="/blog/">Blog</a></nav><span class="sp"></span><a class="btn ghost" href="/converters/all-calculators-converter/">Browse all</a><a class="btn ghost afc-a-out" href="/text/login-converter/">Login</a><a class="btn afc-a-out" href="/utilities/signup/">Sign up</a><a class="btn ghost afc-a-dash" href="/account.html">Dashboard</a><button id="dk" aria-label="Toggle theme">🌙</button></div></header>
+<header>
+  <h1>⚙️ Settings Manager</h1>
+  <input id="token" type="password" placeholder="Admin token / JWT" size="20">
+  <button class="pri" id="load">Load</button>
+  <button class="gho" id="export">⬇ Export</button>
+  <button class="gho" id="importBtn">⬆ Import</button>
+  <input id="importFile" type="file" accept="application/json" class="hide">
+  <button class="pri" id="saveAll">💾 Save all</button>
+</header>
+<div class="wrap">
+  <nav id="nav"><input id="navFilter" placeholder="Filter modules…"><div id="navList"></div></nav>
+  <main>
+    <div class="stat" id="stats"></div>
+    <div class="bar">
+      <input id="search" placeholder="🔎 Search settings (name, description)…" style="flex:1;min-width:220px">
+      <select id="secFilter"><option value="">All security</option><option>critical</option><option>high</option><option>medium</option><option>low</option></select>
+      <select id="sort"><option value="module">Sort: Module</option><option value="setting_name">Setting name</option><option value="display_name">Display name</option><option value="security_level">Security</option><option value="input_type">Input type</option></select>
+      <select id="dir"><option value="asc">Asc</option><option value="desc">Desc</option></select>
+    </div>
+    <div id="list"><p class="note">Enter your admin token and click <b>Load</b>. This Settings Manager reads the enterprise registry (269 settings across 73 modules), each documented with all 40 attributes. Editable values persist to Cloudflare D1 via the settings API. Falls back to the static catalog if the API is unreachable.</p></div>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+let ALL=[],DIRTY={},MOD='';
+const tok=()=>$('#token').value.trim();
+const hdr=()=>({'Content-Type':'application/json','Authorization':'Bearer '+tok()});
+function toast(m,ok=true){const t=$('#toast');t.textContent=m;t.style.borderColor=ok?'var(--ok)':'var(--err)';t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2200);}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function api(r){return r.db_table_name==='seo_settings'?'/api/seo/settings':'/api/settings';}
+function slug(s){return String(s).toLowerCase().replace(/[^a-z0-9]+/g,'-');}
+
+async function load(){
+  try{
+    const r=await fetch('/api/settings/registry',{headers:hdr()});
+    if(!r.ok)throw new Error(r.status);
+    const j=await r.json();ALL=j.settings||[];render();toast('Loaded '+ALL.length+' settings from D1');
+  }catch(e){
+    // fallback: static catalog (definitions only)
+    try{const r=await fetch('/vishal4747/settings-catalog.json');const j=await r.json();ALL=(j.settings||[]).map(s=>({...s,current_value:s.default_value}));render();toast('Loaded '+ALL.length+' from static catalog (API offline)',false);}
+    catch(e2){toast('Load failed',false);}
+  }
+}
+function filtered(){
+  const q=$('#search').value.toLowerCase(),sec=$('#secFilter').value,sort=$('#sort').value,dir=$('#dir').value;
+  let rows=ALL.filter(s=>(!MOD||s.module===MOD)&&(!sec||s.security_level===sec)&&(!q||(s.setting_name+s.display_name+s.description).toLowerCase().includes(q)));
+  rows.sort((a,b)=>String(a[sort]).localeCompare(String(b[sort]))||a.setting_name.localeCompare(b.setting_name));
+  if(dir==='desc')rows.reverse();
+  return rows;
+}
+function renderNav(){
+  const nf=$('#navFilter').value.toLowerCase();
+  const mods={};ALL.forEach(s=>mods[s.module]=(mods[s.module]||0)+1);
+  const names=Object.keys(mods).sort().filter(m=>!nf||m.toLowerCase().includes(nf));
+  $('#navList').innerHTML=`<a data-m="" class="${MOD===''?'on':''}">All modules <span class="c">${ALL.length}</span></a>`+
+    names.map(m=>`<a data-m="${esc(m)}" class="${MOD===m?'on':''}">${esc(m)} <span class="c">${mods[m]}</span></a>`).join('');
+  $$('#navList a').forEach(a=>a.onclick=()=>{MOD=a.dataset.m;renderNav();renderList();});
+}
+function ctrlFor(s){
+  const v=s.current_value==null?'':s.current_value,id='c_'+s.id;
+  const opts=Array.isArray(s.options)?s.options:(s.options?JSON.parse(s.options):null);
+  if(s.input_type==='toggle'){const on=String(v)==='true'||v===true||v===1;return `<select data-k="${s.id}" id="${id}"><option value="true"${on?' selected':''}>Enabled</option><option value="false"${!on?' selected':''}>Disabled</option></select>`;}
+  if(s.input_type==='select'&&opts)return `<select data-k="${s.id}" id="${id}">`+opts.map(o=>`<option${String(v)===String(o)?' selected':''}>${esc(o)}</option>`).join('')+`</select>`;
+  if(s.input_type==='multiselect'&&opts){const cur=Array.isArray(v)?v:String(v||'').split(',');return `<select multiple data-k="${s.id}" id="${id}" style="min-height:72px">`+opts.map(o=>`<option${cur.includes(o)?' selected':''}>${esc(o)}</option>`).join('')+`</select>`;}
+  if(s.input_type==='textarea')return `<textarea data-k="${s.id}" id="${id}" rows="2" placeholder="${esc(s.placeholder)}">${esc(v)}</textarea>`;
+  if(s.input_type==='secret'||s.input_type==='password')return `<input data-k="${s.id}" id="${id}" type="password" placeholder="••• (write-only)" value="">`;
+  const t=s.input_type==='number'||s.input_type==='number-float'?'number':s.input_type==='color'?'color':s.input_type==='email'?'email':s.input_type==='url'?'url':'text';
+  const step=s.input_type==='number-float'?' step="any"':'';
+  const mm=(s.min_value!=null?` min="${s.min_value}"`:'')+(s.max_value!=null?` max="${s.max_value}"`:'');
+  return `<input data-k="${s.id}" id="${id}" type="${t}"${step}${mm} placeholder="${esc(s.placeholder)}" value="${esc(v)}">`;
+}
+function attrRows(s){
+  const A=[['Setting Name',s.setting_name],['Display Name',s.display_name],['Category',s.category],['Module',s.module],['Sub Module',s.sub_module],['Icon',s.icon],['Description',s.description],['Purpose',s.purpose],['Input Type',s.input_type],['Data Type',s.data_type],['Default Value',s.default_value],['Placeholder',s.placeholder],['Validation',s.validation_rules],['Min Value',s.min_value],['Max Value',s.max_value],['Required',s.required],['Options',Array.isArray(s.options)?s.options.join(', '):s.options],['Tooltip',s.tooltip],['Help Text',s.help_text],['Example',s.example_value],['DB Column',s.db_column_name],['DB Table',s.db_table_name],['API Key',s.api_key],['API Endpoint',s.api_endpoint],['Permission',s.permission_required],['Admin Roles',Array.isArray(s.admin_role_access)?s.admin_role_access.join(', '):s.admin_role_access],['User Roles',Array.isArray(s.user_role_access)?s.user_role_access.join(', '):s.user_role_access],['Searchable',s.searchable],['Sortable',s.sortable],['Filterable',s.filterable],['Exportable',s.exportable],['Importable',s.importable],['Reset Supported',s.reset_supported],['Audit Log',s.audit_log_enabled],['Version History',s.version_history_enabled],['Cache Enabled',s.cache_enabled],['Cloudflare KV',s.cloudflare_kv_support],['Cloudflare D1',s.cloudflare_d1_storage],['Cloudflare R2',s.cloudflare_r2_support],['Security Level',s.security_level]];
+  return A.map(([k,v])=>{let disp=v;if(v===true)disp='<span class="yes">Yes</span>';else if(v===false)disp='<span class="no">No</span>';else disp=esc(v==null||v===''?'—':v);return `<div class="attr"><b>${k}</b><span>${disp}</span></div>`;}).join('');
+}
+function renderStats(){
+  const total=ALL.length,mods=new Set(ALL.map(s=>s.module)).size;
+  const crit=ALL.filter(s=>s.security_level==='critical').length,kv=ALL.filter(s=>s.cloudflare_kv_support).length,r2=ALL.filter(s=>s.cloudflare_r2_support).length;
+  $('#stats').innerHTML=`<div class="s"><b>${total}</b><span class=note>Settings</span></div><div class="s"><b>${mods}</b><span class=note>Modules</span></div><div class="s"><b>40</b><span class=note>Attributes each</span></div><div class="s"><b>${crit}</b><span class=note>Critical</span></div><div class="s"><b>${kv}</b><span class=note>KV-backed</span></div><div class="s"><b>${r2}</b><span class=note>R2-backed</span></div>`;
+}
+function renderList(){
+  const rows=filtered(),groups={};rows.forEach(s=>{(groups[s.module]=groups[s.module]||[]).push(s);});
+  const mods=Object.keys(groups);
+  $('#list').innerHTML=mods.map(m=>`<section class="cat"><h2>📦 ${esc(m)} <span class="tag">${groups[m].length}</span></h2>`+groups[m].map(s=>`
+    <div class="item">
+      <div class="head" data-t="${s.id}">
+        <div class="meta"><b>${esc(s.display_name)}</b> <span class="sec ${s.security_level}">${s.security_level}</span>
+          <small>${esc(s.description)}</small>
+          <div class="tags"><span class="k">${esc(s.setting_name)}</span><span class="tag">${esc(s.input_type)}</span><span class="tag">${esc(s.db_table_name)}.${esc(s.db_column_name)}</span>${s.cloudflare_kv_support?'<span class="tag">KV</span>':''}${s.cloudflare_r2_support?'<span class="tag">R2</span>':''}<span class="tag">🔒 ${esc(s.permission_required)}</span></div>
+        </div>
+        <div class="ctrl">${ctrlFor(s)}<button class="pri" data-save="${s.id}">Save</button><button class="gho" data-reset="${s.id}">Reset</button></div>
+      </div>
+      <div class="detail" id="d_${s.id}"><div class="grid40">${attrRows(s)}</div></div>
+    </div>`).join('')+`</section>`).join('')||'<p class=note>No settings match.</p>';
+  wire();
+}
+function render(){renderStats();renderNav();renderList();}
+function getVal(el){if(el.multiple)return [...el.selectedOptions].map(o=>o.value);return el.value;}
+function wire(){
+  $$('.head').forEach(h=>h.addEventListener('click',e=>{if(e.target.closest('.ctrl'))return;$('#d_'+h.dataset.t).classList.toggle('open');}));
+  $$('[data-k]').forEach(el=>el.addEventListener('input',()=>{const s=ALL.find(x=>String(x.id)===el.dataset.k);DIRTY[s.setting_name]={table:s.db_table_name,value:getVal(el)};el.style.borderColor='var(--warn)';}));
+  $$('[data-save]').forEach(b=>b.onclick=()=>{const s=ALL.find(x=>String(x.id)===b.dataset.save);saveOne(s);});
+  $$('[data-reset]').forEach(b=>b.onclick=()=>{const s=ALL.find(x=>String(x.id)===b.dataset.reset);resetOne(s);});
+}
+async function saveOne(s){
+  const el=document.querySelector(`[data-k="${s.id}"]`);let value=el?getVal(el):s.current_value;if(Array.isArray(value))value=value.join(',');
+  const r=await fetch(api(s),{method:'POST',headers:hdr(),body:JSON.stringify({key:s.setting_name,value})});
+  if(r.ok){if(el)el.style.borderColor='var(--ok)';s.current_value=value;delete DIRTY[s.setting_name];toast('Saved '+s.setting_name);}else toast('Save failed (need D1 + token)',false);
+}
+async function resetOne(s){
+  const r=await fetch(api(s),{method:'POST',headers:hdr(),body:JSON.stringify({reset:s.setting_name})});
+  if(r.ok){toast('Reset '+s.setting_name);load();}else toast('Reset failed',false);
+}
+async function saveAll(){
+  const keys=Object.keys(DIRTY);if(!keys.length){toast('No changes');return;}
+  const bySeo={},byGen={};keys.forEach(k=>{let v=DIRTY[k].value;if(Array.isArray(v))v=v.join(',');(DIRTY[k].table==='seo_settings'?bySeo:byGen)[k]=v;});
+  let n=0;
+  if(Object.keys(byGen).length){const r=await fetch('/api/settings',{method:'POST',headers:hdr(),body:JSON.stringify({updates:byGen})});if(r.ok)n+=Object.keys(byGen).length;}
+  if(Object.keys(bySeo).length){const r=await fetch('/api/seo/settings',{method:'POST',headers:hdr(),body:JSON.stringify({updates:bySeo})});if(r.ok)n+=Object.keys(bySeo).length;}
+  toast('Saved '+n+' changes');DIRTY={};load();
+}
+function exportJSON(){
+  const blob=new Blob([JSON.stringify({count:ALL.length,settings:ALL},null,2)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='calculatorfc-settings.json';a.click();
+}
+async function importJSON(file){
+  let obj;try{obj=JSON.parse(await file.text());}catch(e){toast('Invalid JSON',false);return;}
+  const arr=obj.settings||obj;const bySeo={},byGen={};
+  (Array.isArray(arr)?arr:[]).forEach(s=>{if(s.setting_name&&s.current_value!=null)(s.db_table_name==='seo_settings'?bySeo:byGen)[s.setting_name]=s.current_value;});
+  if(Object.keys(byGen).length)await fetch('/api/settings',{method:'POST',headers:hdr(),body:JSON.stringify({import:byGen})});
+  if(Object.keys(bySeo).length)await fetch('/api/seo/settings',{method:'POST',headers:hdr(),body:JSON.stringify({import:bySeo})});
+  toast('Imported');load();
+}
+$('#load').onclick=load;$('#saveAll').onclick=saveAll;$('#export').onclick=exportJSON;
+$('#importBtn').onclick=()=>$('#importFile').click();$('#importFile').onchange=e=>e.target.files[0]&&importJSON(e.target.files[0]);
+$('#search').oninput=renderList;$('#secFilter').onchange=renderList;$('#sort').onchange=renderList;$('#dir').onchange=renderList;$('#navFilter').oninput=renderNav;
+$('#token').value=localStorage.getItem('cfc_admin_tok')||'';$('#token').onchange=()=>localStorage.setItem('cfc_admin_tok',tok());
+// auto-load static catalog so the page is useful even before entering a token
+load();
+</script>
+<footer class="site"><div class="container"><div class="cols"><div><div class="logo" style="font-size:1.15rem;color:#a5b4fc;font-weight:900"><svg viewBox="0 0 40 40" width="1.25em" height="1.25em" style="vertical-align:-6px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="10" fill="#4f46e5"/><rect x="9" y="8" width="22" height="7" rx="2" fill="#c7d2fe"/><g fill="#fff"><rect x="9" y="19" width="6" height="5" rx="1.5"/><rect x="17" y="19" width="6" height="5" rx="1.5"/><rect x="25" y="19" width="6" height="5" rx="1.5"/><rect x="9" y="27" width="6" height="5" rx="1.5"/><rect x="17" y="27" width="6" height="5" rx="1.5"/><rect x="25" y="27" width="6" height="5" rx="1.5"/></g></svg>allfreecalculators.in</div><p style="color:#94a3b8;margin-top:10px;max-width:320px;font-size:.9rem">3,750+ free online calculators, converters and file tools with a premium, fast and mobile-friendly design.</p></div><div><h4>Explore</h4><a href="/converters/all-calculators-converter/">All Tools A–Z</a><a href="/file-tools/">File Tools</a><a href="/blog/">Blog</a></div><div><h4>Popular</h4><a href="/file-tools/create-zip-file/">Create ZIP</a><a href="/file-tools/unzip-extract-zip-file/">Unzip ZIP</a><a href="/file-tools/word-counter-tool/">Word Counter</a></div><div><h4>About</h4><a href="/about/">About Us</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms</a></div></div><div class="cp">© 2026 allfreecalculators.in — All rights reserved. Made with ❤️ for calculation lovers.</div></div></footer><script>(function(){var d=document.getElementById("dk");if(!d)return;if(localStorage.getItem("afc-dark")==="1"){document.body.classList.add("dark");d.textContent="☀️";}d.onclick=function(){var x=document.body.classList.toggle("dark");localStorage.setItem("afc-dark",x?"1":"0");d.textContent=x?"☀️":"🌙";};})();</script><script><!--afc-sw-->if("serviceWorker" in navigator){addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script><script defer src="/js/afc-auth.js"></script>
+<script defer src="/js/afc-enhancements.js"></script></body>
+</html>

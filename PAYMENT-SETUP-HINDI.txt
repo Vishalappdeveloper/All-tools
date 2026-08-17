@@ -1,0 +1,47 @@
+PAYMENT GATEWAY SETUP GUIDE (HINDI/ENGLISH) - allfreecalculators.in
+=====================================================================
+
+Yeh guide bataata hai ki apne Cloudflare Pages + D1 backend par live
+payment gateway (Razorpay / Stripe) kaise connect karein.
+
+1) CLOUDFLARE D1 DATABASE CONNECT KAREIN (zaroori, sabse pehle)
+   - Terminal me: wrangler d1 create allfreecalculators-db
+   - Mile hue database_id ko wrangler.toml me [[d1_databases]] block ke
+     "database_id" field me paste karein (abhi placeholder hai).
+   - Migrations apply karein:
+     wrangler d1 execute allfreecalculators-db --file=migrations/0001_init.sql
+     wrangler d1 execute allfreecalculators-db --file=migrations/0002_email_verifications.sql
+     wrangler d1 execute allfreecalculators-db --file=migrations/0003_admin_extras.sql
+
+2) ZAROORI SECRETS SET KAREIN (Cloudflare Pages dashboard ya CLI se)
+   wrangler pages secret put JWT_SECRET
+   wrangler pages secret put PASSWORD_PEPPER
+
+3) RAZORPAY SETUP (India ke liye recommended)
+   - Razorpay Dashboard > Settings > API Keys se Key ID aur Key Secret lein.
+   - Set karein:
+     wrangler pages secret put RAZORPAY_KEY_ID
+     wrangler pages secret put RAZORPAY_KEY_SECRET
+   - Webhook URL: https://allfreecalculators.in/api/payments/razorpay-verify
+
+4) STRIPE SETUP (International payments ke liye)
+   - Stripe Dashboard > Developers > API Keys se Secret Key lein.
+   - Set karein:
+     wrangler pages secret put STRIPE_SECRET_KEY
+     wrangler pages secret put STRIPE_WEBHOOK_SECRET
+   - Webhook URL: https://allfreecalculators.in/api/payments/stripe-webhook
+
+5) EMAIL (OTP / verification) SETUP
+   wrangler pages secret put RESEND_API_KEY
+
+6) AI FEATURES (optional)
+   wrangler pages secret put OPENAI_API_KEY
+   wrangler pages secret put GEMINI_API_KEY
+
+7) MANAGE LIVE PLANS
+   - Live plans manage karne ke liye /pay-admin/ page use karein (admin login
+     required), ya seedhe /admin/ panel ke Site Settings section se.
+
+NOTE: Jab tak step 1 aur 2 complete nahi hote, koi bhi login/signup/payment
+feature live nahi chalega - static pages theek se dikhenge lekin backend
+data save nahin hoga.

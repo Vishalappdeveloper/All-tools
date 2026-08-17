@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Blog Categories | Admin | allfreecalculators.in</title>
+<meta name="robots" content="noindex,nofollow"/>
+<link href="/favicon.ico" rel="icon"/>
+<style>*{box-sizing:border-box;margin:0;padding:0}:root{--bg:#f7f8fc;--fg:#0f172a;--muted:#64748b;--card:#fff;--line:#e6e8f0;--brand:#4f46e5;--brand2:#7c3aed}body.dark{--bg:#0b1020;--fg:#e5e9f5;--muted:#94a3b8;--card:#141a2e;--line:#233}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:18px;height:64px}
+.logo{font-weight:800;font-size:1.15rem;background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:10px;font-weight:700;font-size:.9rem;border:0;cursor:pointer;text-decoration:none}
+.btn.primary{background:linear-gradient(90deg,var(--brand),var(--brand2));color:#fff}
+.wrap{padding:40px 20px;max-width:1200px;margin:0 auto}
+h1{font-size:1.8rem;font-weight:900;margin-bottom:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:16px}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);font-size:.9rem}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:.9rem;margin-bottom:12px;background:var(--bg);color:var(--fg)}
+label{font-size:.85rem;font-weight:600;color:var(--muted);display:block;margin-bottom:6px}
+.admin-layout{display:grid;grid-template-columns:260px 1fr;gap:24px}
+@media(max-width:900px){.admin-layout{grid-template-columns:1fr}}
+.admin-sidebar{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;height:fit-content;position:sticky;top:84px;max-height:calc(100vh - 100px);overflow:auto}
+.admin-sidebar h4{font-size:.72rem;text-transform:uppercase;color:var(--muted);letter-spacing:.5px;margin:14px 0 6px}
+.admin-sidebar h4:first-child{margin-top:0}
+.admin-sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--fg);font-size:.85rem;text-decoration:none}
+.admin-sidebar a:hover,.admin-sidebar a.active{background:rgba(79,70,229,.1);color:var(--brand)}
+.status-msg{font-size:.85rem;padding:10px 14px;border-radius:8px;margin-bottom:14px;display:none}
+.status-msg.ok{display:block;background:rgba(16,185,129,.12);color:#059669}
+.status-msg.err{display:block;background:rgba(239,68,68,.12);color:#dc2626}
+</style>
+</head>
+<body>
+<header class="site"><div class="container nav">
+<a class="logo" href="/admin/">allfreecalculators Admin</a>
+<span style="flex:1"></span>
+<span id="admin-user-badge" style="font-size:.85rem;color:var(--muted);margin-right:12px"></span>
+<button class="btn" style="background:transparent;border:1px solid var(--line);color:var(--fg)" onclick="adminLogout()">Logout</button>
+</div></header>
+<div class="wrap">
+<div class="admin-layout">
+<div class="admin-sidebar"><h4>allfreecalculators Admin</h4><h4>Overview</h4><a href="/admin/" class="">Admin Dashboard</a><a href="/admin/profile/" class="">Admin Profile</a><h4>Users & Access</h4><a href="/admin/users/" class="">Manage Users</a><a href="/admin/users/details/" class="">User Details</a><a href="/admin/roles/" class="">User Roles</a><a href="/admin/permissions/" class="">Permissions</a><a href="/admin/admins/" class="">Manage Admins</a><h4>Content</h4><a href="/admin/categories/" class="">Manage Categories</a><a href="/admin/tools/" class="">Manage Tools</a><a href="/admin/tools/add/" class="">Add Tool</a><a href="/admin/blogs/" class="">Manage Blogs</a><a href="/admin/blogs/add/" class="">Add Blog</a><a href="/admin/blogs/categories/" class="active">Blog Categories</a><a href="/admin/blogs/tags/" class="">Blog Tags</a><a href="/admin/pages/" class="">Manage Pages</a><a href="/admin/media/" class="">Media Library</a><a href="/admin/files/" class="">File Manager</a><h4>Engagement</h4><a href="/admin/comments/" class="">Comments</a><a href="/admin/reviews/" class="">Reviews</a><a href="/admin/messages/" class="">Contact Messages</a><a href="/admin/newsletter/" class="">Newsletter Subscribers</a><a href="/admin/announcements/" class="">Announcements</a><h4>Settings</h4><a href="/admin/settings/" class="">Site Settings</a><a href="/admin/settings/seo/" class="">SEO Settings</a><a href="/admin/settings/social/" class="">Social Media Settings</a><h4>SEO & Sitemap</h4><a href="/admin/analytics/" class="">Analytics</a><a href="/admin/sitemap/" class="">Sitemap Management</a><a href="/admin/redirects/" class="">Redirect Management</a><a href="/admin/robots/" class="">Robots.txt</a><a href="/admin/llms/" class="">LLMs.txt</a><h4>System</h4><a href="/admin/database/" class="">Database Management</a><a href="/admin/logs/" class="">System Logs</a><a href="/admin/logs/errors/" class="">Error Logs</a><a href="/admin/security/" class="">Security Settings</a><a href="/admin/backup/" class="">Backup</a><a href="/admin/restore/" class="">Restore</a><a href="/admin/cache/" class="">Cache Management</a><a href="/admin/maintenance/" class="">Maintenance Mode</a></div>
+<main>
+<h1>Blog Categories</h1>
+<div class="status-msg" id="msg"></div>
+<div class="card"><div style="overflow:auto"><table id="tbl"><thead><tr><th>Id</th><th>Name</th><th>Slug</th></tr></thead><tbody><tr><td colspan="3">Loading...</td></tr></tbody></table></div></div>
+<p style="color:var(--muted);font-size:.85rem">Data is read live from the <code>categories</code> table via <code>/api/admin/categories</code>. This requires the Cloudflare D1 database to be connected in <code>wrangler.toml</code> and an admin/super_admin account.</p>
+</main>
+</div>
+</div>
+<script>
+function getToken(){return localStorage.getItem('cfc_token')||''}
+function authHeaders(){const t=getToken();return t?{'Authorization':'Bearer '+t}:{}}
+async function requireAdmin(){
+  const t=getToken();
+  if(!t){ window.location.href='/admin/login/'; return null; }
+  try{
+    const r=await fetch('/api/auth/me',{headers:authHeaders()});
+    const d=await r.json();
+    if(!r.ok||!d.user||!['admin','super_admin'].includes(d.user.role)){ window.location.href='/admin/login/'; return null; }
+    const el=document.getElementById('admin-user-badge'); if(el) el.textContent=d.user.email+' ('+d.user.role+')';
+    return d.user;
+  }catch(e){ window.location.href='/admin/login/'; return null; }
+}
+function adminLogout(){ localStorage.removeItem('cfc_token'); fetch('/api/auth/logout',{method:'POST',headers:authHeaders()}).finally(()=>window.location.href='/admin/login/'); }
+async function apiList(table){ const r=await fetch('/api/admin/'+table,{headers:authHeaders()}); return r.json(); }
+async function apiCreate(table,data){ const r=await fetch('/api/admin/'+table,{method:'POST',headers:{'Content-Type':'application/json',...authHeaders()},body:JSON.stringify(data)}); return r.json(); }
+
+requireAdmin();
+(async()=>{const tbody=document.querySelector('#tbl tbody');try{const d=await apiList('categories');const items=d.items||[];if(!items.length){tbody.innerHTML='<tr><td colspan="3">No records yet.</td></tr>';return}tbody.innerHTML=items.map(it=>'<tr>'+["Id","Name","Slug"].map(c=>'<td>'+(it[c.toLowerCase().replace(/ /g,'_')]??'')+'</td>').join('')+'</tr>').join('')}catch(e){tbody.innerHTML='<tr><td colspan="3">Error loading data: '+e.message+'</td></tr>'}})();
+</script>
+</body></html>
